@@ -1,2 +1,1 @@
-numpy==1.14.5
-xgboost==1.5.2
+xgboost==0.81
