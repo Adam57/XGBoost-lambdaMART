@@ -15,8 +15,8 @@ if __name__ == "__main__":
     # param = {'max_depth':8, 'eta':0.1, 'objective':'rank:pairwise'}
     # model = xgb.train(param, training_data, num_boost_round=100, evals=[(testing_data, "testing_data")], verbose_eval=True)
 
-    param = {'max_depth':6, 'eta':0.3, 'silent':0, 'objective':'rank:pairwise', 'num_round':10}
-    model = xgb.train(param, training_data)
+    param = {'max_depth':6, 'eta':0.1, 'objective':'rank:pairwise', 'silent':1}
+    model = xgb.train(param, training_data, num_boost_round=100, evals=[(testing_data, "testing_data")], verbose_eval=True)
 
     dump_list = model.get_dump()
     num_trees = len(dump_list)
